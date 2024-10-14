@@ -1,6 +1,7 @@
 package main
 
 import (
+	"ds-algorithms/reverse"
 	"ds-algorithms/stack"
 	"fmt"
 )
@@ -13,6 +14,8 @@ func main() {
 	// findMemo(arr)
 	// getFirstElement(arr)
 	// funChallenge(arr)
+	var intVal int64
+	fmt.Println(intVal)
 	arr1 := []string{"a", "b", "c", "d", "e"}
 	arr2 := []string{"c", "r", "t", "r"}
 	isCommon := getCommonItems(arr1, arr2)
@@ -33,6 +36,10 @@ func main() {
 	fmt.Println(array)
 	fmt.Println(array.Len())
 	fmt.Println(array.Get(0))
+	str := reverse.ReverseStr("Hi my name is Jim")
+	fmt.Println(str)
+	str2 := reverse.ReverseStr2("Hi my name is Jim")
+	fmt.Println(str2)
 
 }
 
