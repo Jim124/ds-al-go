@@ -1,6 +1,7 @@
 package main
 
 import (
+	mergeSort "ds-algorithms/mergesort"
 	"ds-algorithms/reverse"
 	"ds-algorithms/stack"
 	"fmt"
@@ -41,6 +42,10 @@ func main() {
 	str2 := reverse.ReverseStr2("Hi my name is Jim")
 	fmt.Println(str2)
 
+	// arrInt1 := []int{0, 3, 4, 31}
+	// arrInt2 := []int{4, 6, 40}
+	mergeSortedArray := mergeSort.MergeSortedArray([]int{0, 3, 4, 31}, []int{4, 6, 40})
+	fmt.Println(mergeSortedArray)
 }
 
 // big o O(n)
