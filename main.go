@@ -1,7 +1,9 @@
 package main
 
 import (
-	mergeSort "ds-algorithms/mergesort"
+	"ds-algorithms/hashTable"
+	mergeSort "ds-algorithms/mergeSort"
+	"ds-algorithms/recur"
 	"ds-algorithms/reverse"
 	"ds-algorithms/stack"
 	"fmt"
@@ -46,6 +48,19 @@ func main() {
 	// arrInt2 := []int{4, 6, 40}
 	mergeSortedArray := mergeSort.MergeSortedArray([]int{0, 3, 4, 31}, []int{4, 6, 40})
 	fmt.Println(mergeSortedArray)
+	hash := hashTable.New(50)
+	hash.Set("apples", 1000)
+	fmt.Println(hash.GetData())
+	hash.Set("oranges", 54)
+	hash.Set("grapes", 2)
+	value := hash.Get("apples")
+	fmt.Println(value)
+	value = hash.Get("oranges")
+	fmt.Println(value)
+	firstRecurringItem := recur.FirstRecurringItem([]int{2, 5, 1, 2, 3, 5, 1, 2, 4})
+	fmt.Println(firstRecurringItem)
+	firstRecurringItem = recur.FirstRecurringItem2([]int{2, 5, 1, 2, 3, 5, 1, 2, 4})
+	fmt.Println(firstRecurringItem)
 }
 
 // big o O(n)
